@@ -1,0 +1,20 @@
+#cofelang
+
+//Example cofelang script that showcases all it's features.
+// "#cofelang" is a requirement so that way we know that the rest of the script can at the very least begin to process properly.
+//
+// Usage: cofe main_test.bean 12345
+
+$name = sip("What is your name? ")
+pour("Hello $name!")
+pour("Oh, a command line argument: $arg[0]")
+
+//Wait for 2 seconds, then continue.
+pour("Waiting for 2 seconds, then I will continue")
+sleep(2)
+$test = "test variable in cofelang"
+pour($test)
+pour("Testing shell exec caps...")
+$exec = espresso("uname -a")
+pour($exec)
+emptypot
